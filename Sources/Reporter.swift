@@ -1,9 +1,4 @@
-#if os(OSX) || os(tvOS) || os(watchOS) || os(iOS)
-  import Darwin.libc
-#else
-  import Glibc
-#endif
-
+import Glibc
 
 enum ANSI : String, CustomStringConvertible {
   case Red = "\u{001B}[0;31m"
