@@ -1,4 +1,8 @@
-import Glibc
+#if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+    import Darwin
+#elseif os(Linux)
+    import Glibc
+#endif
 
 enum ANSI : String, CustomStringConvertible {
   case Red = "\u{001B}[0;31m"

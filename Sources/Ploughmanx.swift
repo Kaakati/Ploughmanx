@@ -1,7 +1,7 @@
-#if os(OSX) || os(tvOS) || os(watchOS) || os(iOS)
-  import Darwin.libc
-#else
-  import Glibc
+#if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
+    import Darwin
+#elseif os(Linux)
+    import Glibc
 #endif
 import PathKit
 import Commander
@@ -192,18 +192,18 @@ public class Ploughmanx : CommandType {
 }
 
 
-public let Ploughmanx: Ploughmanx = {
+public let ploughmanx: Ploughmanx = {
   return Ploughmanx()
 }()
 
 public func given(_ expression: String, closure: @escaping StepHandler.Handler) {
-  Ploughmanx.given(expression, closure: closure)
+    ploughmanx.given(expression, closure: closure)
 }
 
 public func when(_ expression: String, closure: @escaping StepHandler.Handler) {
-  Ploughmanx.when(expression, closure: closure)
+    ploughmanx.when(expression, closure: closure)
 }
 
 public func then(_ expression: String, closure: @escaping StepHandler.Handler) {
-  Ploughmanx.then(expression, closure: closure)
+    ploughmanx.then(expression, closure: closure)
 }
