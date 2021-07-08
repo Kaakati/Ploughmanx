@@ -12,8 +12,8 @@ public struct RegexMatch {
 
   public var groups: [String] {
     return (0..<checkingResult.numberOfRanges).map {
-      let range = checkingResult.rangeAt($0)
-      return NSString(string: value).substring(with: range)
+        let range = checkingResult.range(at: $0)
+        return NSString(string: value).substring(with: range)
     }
   }
 }
@@ -30,7 +30,7 @@ struct Regex : CustomStringConvertible {
   }
 
   func matches(_ value: String) -> RegexMatch? {
-    let matches = expression.matches(in: value, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: value.characters.count))
+    let matches = expression.matches(in: value, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: value.count))
     if let match = matches.first {
       return RegexMatch(checkingResult: match, value: value)
     }

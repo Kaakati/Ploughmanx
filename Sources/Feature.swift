@@ -175,7 +175,7 @@ public struct Feature {
 
 extension String {
   func split(_ character: Character, maxSplits: Int) -> [String] {
-    return characters.split(maxSplits: maxSplits) { $0 == character }
+    return self.split(maxSplits: maxSplits) { $0 == character }
                      .map(String.init)
   }
 }
