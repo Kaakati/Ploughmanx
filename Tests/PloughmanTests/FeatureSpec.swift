@@ -1,6 +1,6 @@
 import Spectre
 import PathKit
-import Ploughman
+import Ploughmanx
 
 
 func testFeature() {

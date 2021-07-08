@@ -1,7 +1,7 @@
 import XCTest
 
-class PloughmanTests: XCTestCase {
-  func testPloughman() {
+class PloughmanxTests: XCTestCase {
+  func testPloughmanx() {
     testFeature()
   }
 }

@@ -1,6 +1,6 @@
-#!/usr/bin/env swift -I .conche/modules -L .conche/lib -lPloughman -lSpectre
+#!/usr/bin/env swift -I .conche/modules -L .conche/lib -lPloughmanx -lSpectre
 
-import Ploughman
+import Ploughmanx
 import Spectre
 
 var array: [Int] = []
@@ -30,4 +30,4 @@ then("^I should have (\\d) items? in the array$") { match in
   try expect(array.count) == count
 }
 
-ploughman.run()
+Ploughmanx.run()

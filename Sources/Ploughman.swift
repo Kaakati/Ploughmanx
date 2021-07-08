@@ -36,7 +36,7 @@ enum StepError : Error, CustomStringConvertible {
 }
 
 
-public class Ploughman : CommandType {
+public class Ploughmanx : CommandType {
   let scenario: [Scenario] = []
 
   public init() {}
@@ -192,18 +192,18 @@ public class Ploughman : CommandType {
 }
 
 
-public let ploughman: Ploughman = {
-  return Ploughman()
+public let Ploughmanx: Ploughmanx = {
+  return Ploughmanx()
 }()
 
 public func given(_ expression: String, closure: @escaping StepHandler.Handler) {
-  ploughman.given(expression, closure: closure)
+  Ploughmanx.given(expression, closure: closure)
 }
 
 public func when(_ expression: String, closure: @escaping StepHandler.Handler) {
-  ploughman.when(expression, closure: closure)
+  Ploughmanx.when(expression, closure: closure)
 }
 
 public func then(_ expression: String, closure: @escaping StepHandler.Handler) {
-  ploughman.then(expression, closure: closure)
+  Ploughmanx.then(expression, closure: closure)
 }

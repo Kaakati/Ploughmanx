@@ -1,6 +1,6 @@
-# Ploughman
+# Ploughmanx
 
-Ploughman is Swift implementation of Cucumber, a test runner for the Gherkin language.
+Ploughmanx is Swift implementation of Cucumber, a test runner for the Gherkin language.
 
 > Cucumber is a tool for running automated tests written in plain language.
 > Because they're written in plain language, they can be read by anyone on
@@ -58,18 +58,18 @@ then("^I should have (\\d) items? in the array$") { match in
 
 Then you can run your rules agains your feature files as follows:
 
-![Screenshot of running Ploughman](Resources/screenshot.png)
+![Screenshot of running Ploughmanx](Resources/screenshot.png)
 
 ## Usage
 
-To use Ploughman, you will need to build a command line tool that adds the
-rules required for your implementation and then calls `ploughman.run()` to
+To use Ploughmanx, you will need to build a command line tool that adds the
+rules required for your implementation and then calls `Ploughmanx.run()` to
 start the runner.
 
-You will need to make the Ploughman dependency available for your command line tool.
+You will need to make the Ploughmanx dependency available for your command line tool.
 
 ```swift
-import Ploughman
+import Ploughmanx
 
 var array: [Int] = []
 
@@ -89,7 +89,7 @@ then("^I should have (\\d) items? in the array$") { match in
   }
 }
 
-ploughman.run()
+Ploughmanx.run()
 ```
 
 At any step, you can raise and an error to indicate a failure.
