@@ -2,7 +2,7 @@
   "name": "Ploughmanx",
   "version": "0.3.1",
   "summary": "Ploughmanx.",
-  "summary": "Swift runner for the Gherkin language iOS and OSx",
+  "summary": "Swift runner for the Gherkin language iOS",
   "homepage": "https://github.com/kaakati",
   "license": { "type": "BSD", "file": "LICENSE" },
   "authors": { "Mohamad Kaakati": "m@kaakati.me" },
@@ -13,7 +13,7 @@
   },
   "source_files": "Sources/*.swift",
   "platforms": {
-    "ios": "11",
+    "ios": "11"
   },
   "dependencies": {
     "PathKit": [ "~> 1.0.0" ],
