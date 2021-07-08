@@ -7,6 +7,12 @@ Ploughmanx is Swift implementation of Cucumber, a test runner for the Gherkin la
 > your team. Because they can be read by anyone, you can use them to help
 > improve communication, collaboration and trust on your team.
 
+## Installation
+
+```swift
+pod 'Ploughmanx', :git => 'https://github.com/Kaakati/Ploughmanx.git', :branch => 'main'
+```
+
 ## Example
 
 You can write tests in Gherkin, here's an example:
